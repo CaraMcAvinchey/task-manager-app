@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +18,15 @@
 
     <header>
         <!-- top navbar -->
-        <nav class="purple lighten-1">
+        <nav class="light-blue darken-1">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="">New Task</a></li>
-                    <li><a href="">Categories</a></li>
-                </ul>
+            <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="">New Task</a></li>
+                <li><a href="{{ url_for('categories') }}">Categories</a></li>
+            </ul>
             </div>
         </nav>
 
@@ -34,7 +34,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
-            <li><a href="">Categories</a></li>
+            <li><a href="{{ url_for('categories') }}">Categories</a></li>
         </ul>
     </header>
 
@@ -43,7 +43,7 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer purple darken-1">
+    <footer class="page-footer blue darken-3">
         <div class="footer-copyright">
             <div class="container">
                 For educational purposes only
@@ -54,6 +54,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
 
+</body>
 </html>
